@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="context.smoker.livetv.favorites" name="Smoker Live TV Favoriten Kontextmenü" version="1.0.0" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.0" /></requires><extension point="kodi.context.item"><menu id="kodi.core.main"><item library="context.py"><label>Zu Smoker Live TV Favoriten hinzufügen</label><visible>!String.IsEmpty(ListItem.Label)</visible></item></menu></extension><extension point="xbmc.addon.metadata"><summary lang="de_DE">Kontextmenü für Smoker Live TV Favoriten</summary><description lang="de_DE">Fügt per Rechtsklick ausgewählte Einträge zu Smoker Live TV Favoriten hinzu.</description><platform>all</platform></extension></addon>
+<addon id="context.smoker.streams.favorites" name="Smoker Streams Favoriten Kontextmenü" version="1.0.2" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.0" /></requires><extension point="kodi.context.item" library="context.py"><item><label>Zu Smoker Streams Favoriten hinzufügen</label><visible>Window.IsMedia</visible></item></extension><extension point="xbmc.addon.metadata"><summary>Kontextmenü für Smoker Streams Favoriten</summary><description>Fügt ausgewählte Einträge zu Smoker Streams Favoriten hinzu.</description><platform>all</platform><license>MIT</license></extension></addon>
+<addon id="filmpalast" name="FilmPalast" version="1.0.1" provider-name="smoker"><requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" /><import addon="script.module.resolveurl" version="5.1.173" /><import addon="script.module.six" version="1.11.0" /><import addon="repository.resolveurl" optional="true" /><import addon="script.module.inputstreamhelper" version="0.3.3" /><import addon="script.module.pydevd" optional="true" /><import addon="script.module.web-pdb" optional="true" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension><extension point="xbmc.service" library="service.py" start="startup" /><extension point="xbmc.addon.metadata"><summary lang="de">FilmPalast</summary><summary lang="en_GB">FilmPalast</summary><description lang="de">Filme und Serien von FilmPalast mit TMDB-Informationen.</description><description lang="en_GB">Movies and series from FilmPalast with TMDB information.</description><disclaimer lang="de">Sie können dieses Video Addon gerne verwenden. Der bereitgestellte Inhalt der Webseiten steht in keinem Bezug zu xStream oder den Entwicklern! Weitere Informationen finden Sie in unserer Wiki und FaQ.</disclaimer><disclaimer lang="en_GB">You are welcome to use this video addon. The content provided on the websites has no connection to xStream or the developers! For more information, see our Wiki and FaQ.</disclaimer><language>de en</language><platform>all</platform><license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license><website>https://streamxstream.github.io/xStreamRepoWeb/</website><source>https://github.com/streamxstream</source><assets><icon>resources/filmpalast-icon.png</icon><fanart>resources/filmpalast-background.png</fanart></assets><news>Version 1.0.1
+TMDB-Suche: Jahreszahlen am Titelende erkennen und gleichnamige Filme nach Erscheinungsjahr unterscheiden.</news></extension></addon>
+<addon id="plugin.program.smoker.quellen" name="Smoker Quellen 4.6 Smart Filter" version="2.2.2" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.1" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>executable</provides></extension><extension point="xbmc.addon.metadata"><summary lang="de_DE">Repo-Browser mit festen Quellen und Filtern</summary><description lang="de_DE">Scannt Kodi-Repos, zeigt Addons nach Typ gefiltert an und erlaubt Download sowie lokale Installation vertrauenswürdiger ZIP-Dateien.</description><platform>all</platform><license>MIT</license><assets><icon>resources/media/icon.png</icon><fanart>resources/media/fanart.jpg</fanart></assets></extension></addon>
+<addon id="plugin.program.smokerwizard" name="[COLOR FFff8800][B]Smoker[/B][/COLOR][COLOR FFFFFFFF]Wizard[/COLOR]" version="2.0.9" provider-name="drinfernoo, slamious"><requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" /><import addon="script.module.six" /><import addon="script.kodi.android.update" optional="true" version="1.1.7" /><import addon="script.speedtester" optional="true" version="1.1.2" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>executable</provides></extension><extension point="xbmc.service" library="startup.py" start="startup" /><extension point="xbmc.addon.metadata"><summary lang="en">[COLOR FFff8800][B]Smoker[/B][/COLOR][COLOR FFFFFFFF]Wizard[/COLOR]</summary><description lang="en">[COLOR FFff8800][B]Smoker[/B][/COLOR][COLOR FFFFFFFF]Wizard[/COLOR] offers many maintenance features, selective add-on data saving, and automated build installs.</description><platform>all</platform><reuselanguageinvoker>false</reuselanguageinvoker><source>https://www.github.com/a4k-openproject/plugin.program.smokerwizard/</source><news>
+2.0.7
+ - Fix Error when using default log settings
+2.0.6
+ - Fix regex for formatting tags
+ - Fix theme selection after build install
+ - Fix downloading into invalid path
+2.0.5
+ - Add Enable All Add-ons after Build Install
+2.0.4
+ - Fix leftover broken dialogs
+2.0.3
+ - Don't show previous version builds in Matrix
+2.0.2
+ - Replace remaining occurences of LOGNOTICE
+2.0.1
+ - Add attribution to @slamious
+2.0.0
+ - Initial Matrix support
+1.4.5
+ - Fix bugs with unintended files being cleared`
+1.4.4
+ - Transfer ownership
+1.4.3
+ - Fix missing artwork on items (thanks @xulek)
+1.4.2
+ - A few bug fixes
+1.4.1
+ - Fix crash on fresh installs
+1.4.0
+ - Fix APK Installer
+ - Convert official APK downloader to use official script
+ - Add scrollbar to Save Data dialog
+ - Fix skin path in build info
+1.3.7
+ - Fix import lock error
+1.3.6
+ - Fix notifications
+ - Cleanup log files
+1.3.5
+ - Add Fen
+ - Add Shadow
+ - Fix restoring saved data every boot
+1.3.4
+ - Fix bad indent
+1.3.3
+ - Fix Unicode characters in notification window
+1.3.2
+ - Fix build restore
+1.3.1
+ - Fix "Keep Login Info" menu        
+1.3.0
+ - Fix formatting of saved restore times
+ - Fix local build zip being deleted on restore
+ - Add YouTube API saving
+ - Remove broken context menus
+ - Fix repeating dialogs from shortcuts/favorites
+ - Remove "Normal Install" option
+ - Add "Logging Tools" menu
+ - Add option to save guisettings.xml
+ - Add TMDbHelper Fanart.tv saving
+ - More fixes for OS X
+ - Fix Seren Fanart.tv saving
+1.2.9
+ - Fix NuMb3r5 cache clearing
+ - Fix hang during repo force check
+ - Fix logins being restored every startup
+ - Fix some file permission errors
+ - Fix OS X backup errors
+1.2.8
+ - Add Gaia PM OAuth
+ - Fix binary add-on restoration
+ - Fix some issues with old settings
+ - Fix timing on many startup tasks
+1.2.7
+ - Add TheMovieDb Helper
+1.2.6
+ - Fix Seren PM OAuth    
+1.2.5
+ - Fix typo in debridit.py
+1.2.4
+ - Cover more edge cases during binary detection
+1.2.3
+ - Fix notification ID bug
+1.2.2
+ - Add Seren PM OAuth
+ - Add AllDebrid spport for Gaia, Seren, ResolveURL, and URLResolver
+1.2.1
+ - General bug fixes
+1.2.0
+ - Silence save data notifications on startup
+ - Fix Addon Installer menu
+ - Convert addons.txt to JSON format
+1.1.1
+ - Fix error on advancedsettings categories
+1.1.0
+ - Add back advancedsettings area under System Tweaks/Fixes
+ - Rudimentary version of advancedsettings editor. Can currently only handle editing pre-existing tags under 'cache' and 'network'.
+ - Convert advanced.txt to JSON format
+ - Add "built-in" advancedsettings.xml presets
+1.0.3
+ - Update artwork
+ - Fix rare issues with URLs not working
+ - Fix repetitive build prompt (again)
+ - Fix builds downloading twice
+ - Fix title coloring on notifications
+ - Fix auto repo install
+ - Fix first run settings not being respected
+1.0.2
+ - Fix crash in login menu
+ - Fix auto install repo
+1.0.1
+ - Fix double startup
+ - Fix repetitive build prompt
+ - Fix main menu not opening on Krypton
+ - Fix notification timeout
+ - Fix crash in Trakt menu
+1.0.0
+ - Initial Commit
+        </news><assets><icon>resources/media/smoker_skull_force.png</icon><fanart>fanart.png</fanart></assets></extension></addon>
+<addon id="plugin.video.serienstream" name="serienstream 2.0" version="2.0" provider-name="smoker"><requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" /><import addon="script.module.resolveurl" version="5.1.173" /><import addon="script.module.six" version="1.11.0" /><import addon="repository.resolveurl" optional="true" /><import addon="script.module.inputstreamhelper" version="0.3.3" /><import addon="script.module.pydevd" optional="true" /><import addon="script.module.web-pdb" optional="true" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension><extension point="xbmc.service" library="service.py" start="startup" /><extension point="xbmc.addon.metadata"><summary lang="de">SerienStream für Kodi</summary><summary lang="en_GB">SerienStream for Kodi</summary><description lang="de">serienstream von smoker: Kodi-Add-on für SerienStream mit den Einstellungen Allgemein, Konten, SerienStream und TMDB.</description><description lang="en_GB">serienstream by smoker: Kodi add-on for SerienStream with General, Accounts, SerienStream and TMDB settings.</description><disclaimer lang="de">Sie können dieses Video Addon gerne verwenden. Der bereitgestellte Inhalt der Webseiten steht in keinem Bezug zu xStream oder den Entwicklern! Weitere Informationen finden Sie in unserer Wiki und FaQ.</disclaimer><disclaimer lang="en_GB">You are welcome to use this video addon. The content provided on the websites has no connection to xStream or the developers! For more information, see our Wiki and FaQ.</disclaimer><language>de en</language><platform>all</platform><license>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</license><website>https://streamxstream.github.io/xStreamRepoWeb/</website><source>https://github.com/streamxstream</source><assets><icon>resources/icon.png</icon><fanart>resources/serienstream-fanart.png</fanart></assets><news>Version 2.0 - 21.10.2026
+
+- SerienStream als einziger Anbieter im Startmenü.
+- Einstellungen: Allgemein, Konten, SerienStream und TMDB.
+- Eigenes SerienStream-Icon.
+- Autor: smoker.
+- Kennung: plugin.video.serienstream.
+- Fehlende Serienbeschreibungen werden aus der SerienStream-Detailseite ergänzt.
+- Vorhandene Beschreibungen bleiben bei leeren Metadaten erhalten.
+- Folgen erhalten eigene TMDB-Beschreibungen anhand von Serie, Staffel und Folgennummer.
+- Die allgemeine Serienbeschreibung wird nicht mehr bei jeder Folge wiederholt.
+- Gleichnamige Serien werden anhand der Folgentitel unterschieden.
+- Fehlende deutsche Folgenbeschreibungen werden durch den englischen Text derselben Folge ergänzt.
+- Die originalen Folgennamen von SerienStream bleiben erhalten.</news></extension></addon>
+<addon id="plugin.video.smoker.livetv.favorites" name="Smoker Live TV Favoriten" version="1.1.0" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.0" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension><extension point="xbmc.addon.metadata"><summary lang="de_DE">Smoker Live TV Favoriten</summary><description lang="de_DE">Dynamische Smoker Live TV Favoriten mit eigenen Kategorien, Umbenennen, Verschieben und cleanem Hauptmenü.</description><platform>all</platform></extension></addon>
+<addon id="plugin.video.smoker.mediathek" name="Smoker Mediathek" version="20.0.6" provider-name="aio"><requires><import addon="xbmc.python" version="3.0.0" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension><extension point="xbmc.addon.metadata"><summary lang="de_DE">Hub für TLC, HGTV und RTL+</summary><description lang="de_DE">Hub-Addon nur für TLC, HGTV und RTL+ mit Favoriten, Verlauf und Werkzeugen.</description><platform>all</platform><assets><icon>resources/media/icon.png</icon><fanart>resources/media/fanart.jpg</fanart></assets><news>20.0.6: Hotfix fuer die suchfreie TLC/HGTV/RTL+-Version. Paketstruktur korrigiert, Suchreste entfernt, sauber installierbar in Kodi.</news></extension></addon>
+<addon id="plugin.video.smoker.stalker.test" name="Smokers Portale" version="1.0.5" provider-name="Smoker"><requires><import addon="script.module.requests" /><import addon="script.module.dateutil" /><import addon="inputstream.ffmpegdirect" /><import addon="script.module.infotagger" /></requires><extension point="xbmc.python.pluginsource" library="resources/main.py"><provides>video</provides></extension><extension point="xbmc.python.module" library="resources" /><extension point="xbmc.addon.metadata"><summary lang="de_DE">Smokers Portale für Stalker-Zugänge</summary><description lang="de_DE">Enthält ausschließlich die Stalker-Portal-Funktionen und die ursprünglichen Stalker-Einstellungen.</description><assets><icon>icon-smokers-portale-v2.png</icon></assets></extension></addon>
+<addon id="plugin.video.smoker.streams.favorites" name="Smoker Streams Favoriten" version="1.1.4" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.0" /></requires><extension point="xbmc.python.pluginsource" library="default.py"><provides>video</provides></extension><extension point="xbmc.addon.metadata"><summary>Smoker Streams Favoriten Ultra Clean</summary><description>Streams Favoriten ohne Kategorien, ohne Alle-löschen-Eintrag im Hauptmenü.</description><platform>all</platform></extension></addon>
+<addon id="plugin.video.smoker.tv" name="Smoker Live TV" version="1.6.1" provider-name="vmod"><requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" /><import addon="inputstream.adaptive" optional="true" /><import addon="inputstream.ffmpegdirect" optional="true" /></requires><extension point="xbmc.python.pluginsource" library="lib/default.py"><provides>video</provides></extension><extension point="xbmc.addon.metadata"><summary lang="de_DE">Smoker Live TV im Smoker-Design mit Adaptive Streaming</summary><summary lang="en_GB">Smoker Live TV with full Smoker theme</summary><description lang="de_DE">Live-TV Add-on mit Smoker-Theme, Kodi-Style Menü-Icons, Favoriten, System-Check, Adaptive Streaming und stabilerer Wiedergabe.</description><description lang="en_GB">Live TV add-on with Smoker theme, Kodi-style menu icons, favorites, system check, adaptive streaming with VTV-style conservative playback for better stability.</description><assets><icon>icon_smoker_v2.png</icon><fanart>fanart_smoker_v2.png</fanart></assets></extension></addon>
+<addon id="plugin.video.smoker.xstalker" name="Smoker XStalker" version="3.1.9" provider-name="Smoker"><requires><import addon="xbmc.python" version="3.0.0" /><import addon="script.module.requests" version="2.25.1" /><import addon="script.module.pydevd" optional="true" /></requires><extension point="xbmc.python.pluginsource" library="addon_entry.py"><provides>video</provides></extension><extension point="xbmc.service" library="service_entry.py" start="startup" /><extension point="xbmc.addon.metadata"><reuselanguageinvoker>true</reuselanguageinvoker><platform>all</platform><summary lang="de_DE">Smoker XStalker</summary><description lang="de_DE">Smoker XStalker für Live-TV, Filme und Serien über Stalker-Portale.</description><summary lang="en_GB">Smoker XStalker</summary><description lang="en_GB">Smoker XStalker for live TV, movies and series through Stalker portals.</description><license>GPL-3.0-or-later</license><language>de_DE</language><assets><icon>resources/media/icon.png</icon><screenshot>resources/media/screenshot_1.png</screenshot><screenshot>resources/media/screenshot_2.png</screenshot><screenshot>resources/media/screenshot_3.png</screenshot><screenshot>resources/media/screenshot_4.png</screenshot><screenshot>resources/media/screenshot_5.png</screenshot><screenshot>resources/media/screenshot_6.png</screenshot></assets><news>
+3.1.9  (2026-09-28)
+- Fehlenden VAVOO-Schalter für Stalker-TS/HLS-Reconnect ergänzt
+- Portal-, MAC-, Status- und Account-Anzeige mit dem ausgewählten Portal verbunden
+
+3.1.8  (2026-09-28)
+- VAVOO-STALKER-Reiter für Kodi 21 sichtbar gemacht
+- Fehlende Beschriftungen in Allgemein ergänzt
+
+3.1.7  (2026-09-28)
+- STALKER-Einstellungsreiter aus VAVOO 2026.03.31 übernommen
+
+3.1.6  (2026-09-20)
+- Startblockade durch Favoriten-Datenbankbereinigung behoben
+- Hauptmenü öffnet wieder ohne Netzwerk- oder Datenbank-Wartezeit
+
+3.1.5  (2026-09-20)
+- Addon-Beschreibung und Änderungshinweise vollständig auf Deutsch
+
+3.1.4  (2026-09-20)
+- Aktionsbuttons der STALKER-Einstellungen für Kodi 21 korrigiert
+- Sichtbare und abbrechbare Fortschrittsanzeige beim Portaltest ergänzt
+
+3.1.3  (2026-09-20)
+- Deutsche Beschriftungen und Hilfetexte für alle STALKER-Einstellungen ergänzt
+
+3.1.2  (2026-09-20)
+- Fehlende Beschriftung der STALKER-Kategorie behoben
+
+3.1.1  (2026-09-20)
+- ZIP für die Kodi-VFS-Kompatibilität neu gepackt
+
+3.1.0  (2026-09-20)
+- Zentrale Rubrik STALKER in den Einstellungen ergänzt
+- Portal-Auswahl, sichere lokale MAC-Erzeugung und Kanalgruppen-Filter
+- Einstellbare Testversuche, Verbindungs-Timeouts und Cache-Dauer
+- Portalstatus-Anzeige und sichere technische Cache-Bereinigung
+
+3.0.0  (2026-04-05)
+- Addon in Smoker XStalker umbenannt
+- Neue Addon-ID: plugin.video.smoker.xstalker
+- Automatische Übernahme von Einstellungen, Caches und Datenbanken aus plugin.video.svod
+		</news></extension></addon>
+<addon id="skin.smoker.neon.ultra" name="Smoker Neon ULTRA" version="8.3.0" provider-name="Smoker"><requires><import addon="xbmc.gui" version="5.17.0" /><import addon="script.skinshortcuts" version="1.1.4" /><import addon="script.image.resource.select" version="3.0.2" /></requires><extension point="xbmc.gui.skin" debugging="false"><res width="1920" height="1080" aspect="16:9" default="true" folder="xml" /></extension><extension point="xbmc.addon.metadata"><summary lang="en_GB">Smoker Neon ULTRA</summary><description lang="en_GB">Smoker Neon ULTRA based on Mimic-LR with orange/black theme and integrated smoker background.</description><platform>all</platform><license>CC BY-NC-SA 4.0</license><forum>http://forum.kodi.tv/forumdisplay.php?fid=218</forum><website></website><email></email><source></source><assets><icon>resources/icon.png</icon><fanart>resources/fanart.png</fanart><screenshot>resources/screenshot-01.png</screenshot><screenshot>resources/screenshot-02.png</screenshot><screenshot>resources/screenshot-03.png</screenshot><screenshot>resources/screenshot-04.png</screenshot><screenshot>resources/screenshot-05.png</screenshot><screenshot>resources/screenshot-06.png</screenshot><screenshot>resources/screenshot-07.png</screenshot><screenshot>resources/screenshot-08.png</screenshot></assets><news></news></extension></addon>
+</addons>
