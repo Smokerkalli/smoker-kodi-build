@@ -1,5 +1,9 @@
 # Smoker Kodi Build
 
-Privates GitHub-Repository fuer die Kodi-Add-ons von Smoker. Der Ordner `kodi-repository/` enthaelt 14 Installationspakete fuer 13 verschiedene Add-ons sowie `addons.xml` und dessen Pruefsumme. XStalker 3.1.9 steht im Katalog; 3.0.0 bleibt als aelteres Paket erhalten.
+Kodi-Add-ons von Smoker. Der Ordner `kodi-repository/` enthält 14 Installationspakete für 13 verschiedene Add-ons sowie den Katalog mit Prüfsumme. XStalker 3.1.9 steht im Katalog; 3.0.0 bleibt als älteres Paket erhalten.
 
-Die ZIPs koennen nach dem Herunterladen manuell in Kodi installiert werden. Dieses private GitHub-Repository ist kein direkt erreichbares Kodi-Repository. Es enthaelt noch keine Android-APK und keinen Build-Workflow.
+1. In Kodi unter **Einstellungen → Dateimanager → Quelle hinzufügen** die Adresse `https://smokerkalli.github.io/smoker-kodi-build/kodi-repository/` eintragen und die Quelle **Smoker Repo** nennen.
+2. Unter **Add-ons → Aus ZIP-Datei installieren → Smoker Repo** die `repository.smoker-1.0.0.zip` wählen. Falls Kodi danach fragt, in den Add-on-Einstellungen unbekannte Quellen zulassen.
+3. Unter **Aus Repository installieren → Smoker Repository** ein Add-on auswählen. Einzelne Add-on-ZIPs lassen sich auch direkt aus den Unterordnern der Dateiquelle installieren.
+
+Einzelne Add-ons setzen zusätzliche Abhängigkeiten voraus, die in Kodi verfügbar sein müssen.
