@@ -1,10 +1,71 @@
 <!doctype html>
 <html lang="de">
-<meta charset="utf-8">
-<title>Smoker Repository</title>
-<h1>Smoker Repository</h1>
-<table>
-<tr><td><a href="repository.smoker-1.0.0.zip">repository.smoker-1.0.0.zip</a></td></tr>
-<tr><td><a href="kodi-repository/">kodi-repository/</a></td></tr>
-</table>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Das Smoker Repository für Kodi: Add-ons entdecken, ZIPs herunterladen und das Repository einrichten.">
+  <meta name="theme-color" content="#141210">
+  <title>Smoker Repository · Add-ons für Kodi</title>
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/catalog.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#addons">Zu den Add-ons springen</a>
+  <header class="header wrap">
+    <a class="brand" href="./" aria-label="Smoker Repository, Startseite"><span class="brand-icon" aria-hidden="true">S</span><span>Smoker <small>REPOSITORY</small></span></a>
+    <nav aria-label="Hauptnavigation"><a href="#addons">Add-ons</a><a href="#einrichtung">Einrichtung</a></nav>
+  </header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <p class="kicker"><span></span> SMOKER REPOSITORY</p>
+        <h1 id="hero-title">Add-ons<br><em>für Kodi.</em></h1>
+        <p class="intro">Video-Add-ons, Werkzeuge und der Smoker Neon Skin. Installiere das Repository in Kodi oder lade einzelne ZIPs direkt herunter.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="repository.smoker-1.0.0.zip" download>Repository-ZIP <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="#einrichtung">In Kodi einrichten <span aria-hidden="true">↘</span></a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="seal"><span>S</span></div></div>
+    </section>
+
+    <section id="addons" class="section" aria-labelledby="addons-title">
+      <p class="kicker"><span></span> DOWNLOADS</p>
+      <div class="section-heading"><h2 id="addons-title">Add-on-Katalog</h2><span class="result" id="result" role="status"></span></div>
+      <div id="controls" class="controls" hidden>
+        <div class="filters" role="group" aria-label="Kategorie">
+          <button type="button" data-category="all" aria-pressed="true">Alle</button>
+          <button type="button" data-category="video" aria-pressed="false">Video</button>
+          <button type="button" data-category="tools" aria-pressed="false">Werkzeuge</button>
+          <button type="button" data-category="skin" aria-pressed="false">Skin</button>
+        </div>
+        <label class="search"><span class="sr-only">Add-ons suchen</span><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Add-ons suchen …" autocomplete="off"></label>
+      </div>
+      <p id="catalog-message" class="muted">Der Katalog wird geladen. Die <a href="kodi-repository/">Dateiliste</a> ist auch direkt erreichbar.</p>
+      <noscript><p class="muted">Ohne JavaScript findest du alle ZIPs in der <a href="kodi-repository/">Dateiliste</a>.</p></noscript>
+      <div id="cards" class="cards"></div>
+    </section>
+
+    <section id="einrichtung" class="section setup" aria-labelledby="setup-title">
+      <p class="kicker"><span></span> KODI</p>
+      <h2 id="setup-title">So richtest du das Repo ein</h2>
+      <ol class="steps">
+        <li><h3>Quelle hinzufügen</h3><p>Öffne in Kodi <strong>Einstellungen → Dateimanager → Quelle hinzufügen</strong>. Trage diese Adresse ein und nenne die Quelle „Smoker Repo“.</p>
+          <div class="copy-row"><code id="source-url">https://smokerkalli.github.io/smoker-kodi-build/</code><button type="button" id="copy-url" class="copy" hidden>Kopieren</button></div>
+          <span id="copy-status" class="sr-only" role="status"></span></li>
+        <li><h3>Repository installieren</h3><p>Wähle <strong>Add-ons → Aus ZIP-Datei installieren → Smoker Repo</strong> und dann <strong>repository.smoker-1.0.0.zip</strong>. Aktiviere bei Bedarf „Unbekannte Quellen“.</p></li>
+        <li><h3>Add-on auswählen</h3><p>Öffne <strong>Aus Repository installieren → Smoker Repository</strong>. Einzelne Add-on-ZIPs findest du auch in der Dateiliste.</p></li>
+      </ol>
+    </section>
+
+    <section class="file-source" aria-labelledby="files-title">
+      <h2 id="files-title">Kodi-Dateiliste</h2>
+      <table aria-label="Dateien für den Kodi-Dateimanager">
+        <tr><td><a href="repository.smoker-1.0.0.zip">repository.smoker-1.0.0.zip</a></td></tr>
+        <tr><td><a href="kodi-repository/">kodi-repository/</a></td></tr>
+      </table>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>Smoker Repository</span><a href="https://github.com/Smokerkalli/smoker-kodi-build">GitHub</a></footer>
+</body>
 </html>
