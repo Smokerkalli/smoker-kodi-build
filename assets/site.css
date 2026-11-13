@@ -39,6 +39,8 @@ h1 em{color:var(--hot);font-style:normal}
 h2{font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.045em}
 .result,.muted,.description,.steps p{color:var(--muted)}
 .result{font-size:.88rem}
+.usage-note{margin:16px 0;color:var(--muted);background:var(--panel);border-inline-start:3px solid var(--hot);border-radius:6px;padding:11px 15px;font-size:.88rem}
+.usage-note strong{color:var(--ink)}
 .controls{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin:22px 0}
 .filters{display:flex;flex-wrap:wrap;gap:6px}
 .filters button,.copy{border:1px solid var(--line);background:var(--panel);border-radius:8px;color:var(--ink);padding:7px 13px;font-weight:700;font-size:.86rem;min-height:40px}
